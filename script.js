@@ -21,3 +21,15 @@ async function getExchangeRate(daMoeda, ParaMoeda) {
     }
  
     }
+
+    //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    document.getElementById('currency-form').addEventListener('submit', async function(event){
+event.preventDefault();
+
+const valor = parseFloat(document.getElementById('amount').value);
+const daMoeda = document.getElementById('daMoeda').value;
+const ParaMoeda = document.getElementById('paraMoeda').value;
+//busca taxa de cambio da API
+const exchangerate = getExchangeRate(daMoeda, ParaMoeda);
+
+    });
