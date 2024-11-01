@@ -32,4 +32,11 @@ const ParaMoeda = document.getElementById('paraMoeda').value;
 //busca taxa de cambio da API
 const exchangerate = getExchangeRate(daMoeda, ParaMoeda);
 
+if (exchangerate){
+    const convertedValue = valor * exchangerate;
+
+    const conversao = document.getElementById('conersao');
+    conversao.textContent = 'resultado: ${convertedValue.toFixed(2)}${ParaMoeda}';
+    
+}
     });
