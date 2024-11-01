@@ -16,7 +16,8 @@ async function getExchangeRate(daMoeda, ParaMoeda) {
         }
  
     }catch (error){
-        
+        console.error("Error:", error)
+    return null;
     }
  
     }
