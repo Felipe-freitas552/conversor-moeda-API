@@ -37,6 +37,7 @@ if (exchangerate){
 
     const conversao = document.getElementById('conersao');
     conversao.textContent = 'resultado: ${convertedValue.toFixed(2)}${ParaMoeda}';
-    
+}else{
+    alert('Não foi possivel buscar a cotação. Tente novamente')
 }
     });
